@@ -1,0 +1,12 @@
+networks:
+  devnet:
+    name: devnet
+
+services:
+  blockchain: 
+    container_name: blockchain
+    build: .
+    ports:
+      - "8545:8545"
+    networks:
+      - devnet
