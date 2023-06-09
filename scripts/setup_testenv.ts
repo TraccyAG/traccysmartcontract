@@ -48,8 +48,8 @@ async function main() {
   await getUsdc(customer.address, "1000");
 
   // create first phase
-  contracts.token.connect(deployer).transfer(contracts.sale.address, ethers.utils.formatEther("80000"));
-  contracts.sale.connect(deployer).createPhase(ethers.utils.parseUnits("0.25", 6), ethers.utils.formatEther("80000"));
+  await contracts.token.connect(deployer).transfer(contracts.sale.address, ethers.utils.parseEther("80000"));
+  await contracts.sale.connect(deployer).createPhase(ethers.utils.parseUnits("0.25", 6), ethers.utils.parseEther("80000"));
 }
 
 main()

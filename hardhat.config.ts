@@ -16,10 +16,10 @@ const config: HardhatUserConfig = {
             url: "http://127.0.0.1:8545"
         },
         hardhat: {
-            chainId: 43114,
+            chainId: 0xa86a,
             initialBaseFeePerGas: 0,
             forking: {
-               url: "https://avalanche-mainnet.infura.io/v3/c1294a4bfd3041c9a94058e870c65e70"
+               url: "https://avalanche-mainnet.infura.io/v3/<yourkey>"
             },
             // mining: {
             //     auto: false,
